@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=73971dce-5392-4aa5-a845-9855686679d0&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <title>Brixton</title>
+  <script defer src="main.94e82afd0090a9d174c8.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body class="page">
+    <header class="header chips chips_position_header" id="main">
+      <div class="page__section">
+        <div class="header__navigation">
+          <button class="header__burger" type="button">
+            <span class="header__burger__span"></span>
+            <span class="header__burger__span"></span>
+            <span class="header__burger__span"></span>
+          </button>
+
+          <div class="header__menu">
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__list-item">
+                  <a href="/main.html" class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__list-item">
+                  <a href="#price" class="navigation__link">Прайс-лист</a>
+                </li>
+                <li class="navigation__list-item">
+                  <a href="/franchise.html" class="navigation__link"
+                    >Франшиза</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="social header__social">
+              <li>
+                <a
+                  href="#"
+                  title="VKontakte"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="geolacation">
+            <a
+              href="#"
+              title="Location"
+              target="_blank"
+              class="geolacation__link"
+            >
+              <p>Уфа</p></a
+            >
+          </div>
+        </div>
+
+        <div class="lead">
+          <img
+            class="lead__logo"
+            src="img/logo_main.svg"
+            alt="Brixton Barbershop лого"
+          />
+          <h1 class="page__title lead__title">
+            Отличная стрижка ближе, чем ты&nbsp;думаешь
+          </h1>
+          <p class="lead__caption">Больше, чем просто барбершоп</p>
+          <button
+            class="lead__appointment-btn lead__appointment-btn--mg lead__appointment-btn--accent"
+            type="button"
+          >
+            Онлайн запись
+          </button>
+          <button
+            class="lead__appointment-btn lead__appointment-btn--mg lead__appointment-btn--accent"
+            type="button"
+          >
+            3D-тур
+          </button>
+
+          <ul class="contacts lead__contacts">
+            <li class="contacts__list-item contacts__list-item--pg">
+              <p class="contacts__info">Телефон для записи:</p>
+              <a href="tel:+79177472525" class="contacts__link"
+                >+7 (917) 747-25-25</a
+              >
+
+              <p class="contacts__info">Режим работы:</p>
+              <p class="contacts__link">Пн - Вс | 10:00 - 22:00</p>
+            </li>
+            <li class="contacts__list-item contacts__list-item--pg">
+              <p class="contacts__info">Адрес:</p>
+              <p class="contacts__link">г. Уфа, ул. Менделеева, 145</p>
+            </li>
+            <li class="contacts__list-item contacts__list-item--pg">
+              <article>
+                <h2 class="contacts__title">
+                  Быстрая&nbsp;<span>онлайн запись</span>
+                </h2>
+                <p class="contacts__text">В мобильном приложении</p>
+                <a
+                  href="#"
+                  class="contacts__appointment-btn contacts__google"
+                  type="button"
+                ></a>
+                <a
+                  href="#"
+                  class="contacts__appointment-btn contacts__apple"
+                  type="button"
+                ></a>
+              </article>
+              <div class="contacts__mobile-app">
+                <img
+                  src="img/mobile-app.png"
+                  alt="Мобильное приложение"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="about page__section chips chips_position_about"
+        id="about"
+      >
+        <h2 class="page__section-title page__section-title--color">О нас</h2>
+        <div class="about__content">
+          <div class="slider mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  class="slider__image"
+                  src="img/about.png"
+                  alt="Brixton Barbershop"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="slider__image"
+                  src="img/slide_2.jpg"
+                  alt="Brixton Barbershop"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="slider__image"
+                  src="img/slide_3.jpg"
+                  alt="Brixton Barbershop"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="slider__image"
+                  src="img/slide_3.jpg"
+                  alt="Brixton Barbershop"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="slider__image"
+                  src="img/slide_2.jpg"
+                  alt="Brixton Barbershop"
+                />
+              </div>
+            </div>
+            <div class="slider__indicators"></div>
+          </div>
+
+          <article class="about__text">
+            <h3>
+              Уфа&nbsp;&mdash; первый в&nbsp;России город, <br />
+              где был открыт <span>Brixton Barbershop.</span>
+            </h3>
+            <p class="about__paragraph">
+              Он&nbsp;несет в&nbsp;себе ценности и&nbsp;философию бренда. Именно
+              здесь мужчина любого возраста может почувствовать себя
+              в&nbsp;настоящем мужском клубе, где его окружат заботой, вниманием
+              к&nbsp;деталям.
+            </p>
+            <p class="about__paragraph about__paragraph--bottom">
+              Мужской клуб Brixton предоставляет полный спектр услуг, который
+              включает стрижку головы, моделирование бороды, бритье, в&nbsp;том
+              числе опасной бритвой, коррекция воском, комплексные
+              и&nbsp;СПА-услуги.
+            </p>
+          </article>
+        </div>
+      </section>
+      <article class="advantages">
+        <div class="page__section">
+          <div class="advantages__content">
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <img
+                  src="img/mens-club.svg"
+                  alt="Мужской клуб"
+                />
+                <p class="advantages__text">Атмосфера<br />мужского клуба</p>
+              </li>
+              <li class="advantages__item">
+                <img
+                  src="img/professionals.svg"
+                  alt="Команда профессионалов"
+                />
+                <p class="advantages__text">
+                  Профессиональная<br />команда мастеров
+                </p>
+              </li>
+              <li class="advantages__item">
+                <img
+                  src="img/interior.svg"
+                  alt="Интерьер"
+                />
+                <p class="advantages__text">Оригинальный<br />интерьер</p>
+              </li>
+              <li class="advantages__item">
+                <img
+                  src="img/prices.svg"
+                  alt="Лояльные цены"
+                />
+                <p class="advantages__text">Лояльные<br />цены</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <section class="price chips_position_price" id="price">
+        <div class="page__section">
+          <h2 class="page__title price__title">Прайс</h2>
+
+          <table class="price__table">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services">
+                  Основные услуги
+                </td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  Топ-барбер
+                </td>
+                <td class="price__table-header price__table-barber">
+                  Премиум-барбер
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Стрижка мужская</td>
+                <td class="price__table-cell">1400</td>
+                <td class="price__table-cell">1600</td>
+                <td class="price__table-cell">1400</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка детская (от&nbsp;3&nbsp;до&nbsp;9&nbsp;лет)
+                </td>
+                <td class="price__table-cell">1000</td>
+                <td class="price__table-cell">1200</td>
+                <td class="price__table-cell">1000</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Стрижка машинкой (2 насадки)</td>
+                <td class="price__table-cell">800</td>
+                <td class="price__table-cell">900</td>
+                <td class="price__table-cell">800</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Моделирование бороды</td>
+                <td class="price__table-cell">1000</td>
+                <td class="price__table-cell">1200</td>
+                <td class="price__table-cell">1000</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Стрижка бороды</td>
+                <td class="price__table-cell">700</td>
+                <td class="price__table-cell">800</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Бритье традиционное (голова)</td>
+                <td class="price__table-cell">1000</td>
+                <td class="price__table-cell">1100</td>
+                <td class="price__table-cell">1000</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Бритье традиционное (лицо)</td>
+                <td class="price__table-cell">1000</td>
+                <td class="price__table-cell">1100</td>
+                <td class="price__table-cell">1000</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Королевское бритье (голова)</td>
+                <td class="price__table-cell">1400</td>
+                <td class="price__table-cell">1600</td>
+                <td class="price__table-cell">1400</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Королевское бритье (лицо)</td>
+                <td class="price__table-cell">1400</td>
+                <td class="price__table-cell">1600</td>
+                <td class="price__table-cell">1400</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="price__table">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services">
+                  Дополнительные услуги
+                </td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  Топ-барбер
+                </td>
+                <td class="price__table-header price__table-barber">
+                  Премиум-барбер
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Камуфляж седины (голова)</td>
+                <td class="price__table-cell">1100</td>
+                <td class="price__table-cell">1200</td>
+                <td class="price__table-cell">1100</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Камуфляж седины (борода)</td>
+                <td class="price__table-cell">900</td>
+                <td class="price__table-cell">1000</td>
+                <td class="price__table-cell">900</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Коррекция воском (одна&nbsp;зона)
+                </td>
+                <td class="price__table-cell">400</td>
+                <td class="price__table-cell">400</td>
+                <td class="price__table-cell">400</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Окантовка</td>
+                <td class="price__table-cell">400</td>
+                <td class="price__table-cell">500</td>
+                <td class="price__table-cell">400</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Мытьё и укладка</td>
+                <td class="price__table-cell">500</td>
+                <td class="price__table-cell">600</td>
+                <td class="price__table-cell">500</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="price__table">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services">
+                  Комплексные услуги
+                </td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  Топ-барбер
+                </td>
+                <td class="price__table-header price__table-barber">
+                  Премиум-барбер
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Друг + друг</td>
+                <td class="price__table-cell">2400</td>
+                <td class="price__table-cell">2800</td>
+                <td class="price__table-cell">2400</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Папа + сын (от&nbsp;3&nbsp;до&nbsp;9&nbsp;лет)
+                </td>
+                <td class="price__table-cell">2100</td>
+                <td class="price__table-cell">2400</td>
+                <td class="price__table-cell">2100</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка мужская +&nbsp;Моделирование бороды
+                  с&nbsp;подбриванием
+                </td>
+                <td class="price__table-cell">2100</td>
+                <td class="price__table-cell">2400</td>
+                <td class="price__table-cell">2100</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Моделирование бороды +&nbsp;Камуфляж
+                </td>
+                <td class="price__table-cell">1700</td>
+                <td class="price__table-cell">1900</td>
+                <td class="price__table-cell">1700</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка мужская +&nbsp;камуфляж седины (голова)
+                </td>
+                <td class="price__table-cell">2200</td>
+                <td class="price__table-cell">2500</td>
+                <td class="price__table-cell">2200</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка мужская +&nbsp;Стрижка&nbsp;бороды
+                </td>
+                <td class="price__table-cell">1800</td>
+                <td class="price__table-cell">2100</td>
+                <td class="price__table-cell">1800</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="price__table">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services">
+                  Спа услуги
+                </td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  Топ-барбер
+                </td>
+                <td class="price__table-header price__table-barber">
+                  Премиум-барбер
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Black mask (Чёрная маска)</td>
+                <td class="price__table-cell">500</td>
+                <td class="price__table-cell">500</td>
+                <td class="price__table-cell">500</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Скрабирование (Распаривание, мягкое очищение кожи лица)
+                </td>
+                <td class="price__table-cell">1000</td>
+                <td class="price__table-cell">1200</td>
+                <td class="price__table-cell">1000</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Патчи</td>
+                <td class="price__table-cell">200</td>
+                <td class="price__table-cell">200</td>
+                <td class="price__table-cell">200</td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Спа-процедура (Комплекс)</td>
+                <td class="price__table-cell">1200</td>
+                <td class="price__table-cell">1200</td>
+                <td class="price__table-cell">1200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="barbers page__section" id="barbers">
+        <h2 class="page__section-title page__section-title--color">
+          Наши мастера
+        </h2>
+        <p class="barbers__paragraph-main">Профессионалы своего дела</p>
+        <p class="barbers__paragraph-secondary">
+          Наши барберы&nbsp;&mdash; особенная команда. Это не&nbsp;просто
+          мастера, которые прошли обучение. Это настоящая сплоченная команда,
+          каждый участник которой работает в&nbsp;семье Brixton. Настоящие
+          профессионалы своего дела выполняют даже самые сложные стрижки. Это
+          подтверждают как постоянные, так и&nbsp;новые довольные гости
+          барбершопа Brixton.
+        </p>
+        <ul class="barbers__list">
+          <li class="barbers__list-item">
+            <img
+              src="img/barber_1.jpg"
+              alt="Константин"
+              class="barbers__image"
+            />
+            <p class="barbers__name">Виталий</p>
+            <p class="barbers__grade barbers__grade_top">Топ-барбер</p>
+
+            <ul class="social barbers__social">
+              <li>
+                <a
+                  href="#"
+                  title="VKontakte"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title="Instagram"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+            </ul>
+          </li>
+          <li class="barbers__list-item">
+            <img
+              src="img/barber_2.jpg"
+              alt="Константин"
+              class="barbers__image"
+            />
+            <p class="barbers__name">Дмитрий</p>
+            <p class="barbers__grade">Барбер</p>
+
+            <ul class="social barbers__social">
+              <li>
+                <a
+                  href="#"
+                  title="VKontakte"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title="Instagram"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+            </ul>
+          </li>
+          <li class="barbers__list-item">
+            <img
+              src="img/barber_3.jpg"
+              alt="Константин"
+              class="barbers__image"
+            />
+            <p class="barbers__name">Валентина</p>
+            <p class="barbers__grade">Барбер</p>
+
+            <ul class="social barbers__social">
+              <li>
+                <a
+                  href="#"
+                  title="VKontakte"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title="Instagram"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="barbers__list-item">
+            <img
+              src="img/barber_4.jpg"
+              alt="Константин"
+              class="barbers__image"
+            />
+            <p class="barbers__name">Дмитрий</p>
+            <p class="barbers__grade">Барбер</p>
+
+            <ul class="social barbers__social">
+              <li>
+                <a
+                  href="#"
+                  title="VKontakte"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title="Instagram"
+                  target="_blank"
+                  class="social__link"
+                ></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contacts-section page__section" id="contacts">
+        <div class="map" id="map">
+          <p class="latitude-center">54.714511</p>
+          <p class="longitude-center">55.998630</p>
+          <p class="latitude-pin">54.714505</p>
+          <p class="longitude-pin">55.998631</p>
+          <p class="address">ул. Менделеева 145</p>
+          <p class="barbershop-info">Brixton Barbershop</p>
+        </div>
+
+        <img
+          src="img/logo_footer.svg"
+          alt="Brixton Barbershop лого"
+          class="contacts-section__logo"
+        />
+
+        <ul class="contacts contacts-section__contact-list">
+          <li class="contacts__list-item">
+            <p class="contacts__info">Телефон для записи:</p>
+            <a href="tel:+79177472525" class="contacts__link"
+              >+7 (917) 747-25-25</a
+            >
+            <p class="contacts__info">Звонок для записи</p>
+          </li>
+          <li class="contacts__list-item">
+            <p class="contacts__info">Адрес:</p>
+            <p class="contacts__link">г. Уфа, ул. Менделеева, 145</p>
+          </li>
+          <li class="contacts__list-item">
+            <p class="contacts__info">Режим работы:</p>
+            <p class="contacts__link">10:00 - 22:00</p>
+            <p class="contacts__info">Пн - Вс</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <!-- <div class="page__section footer__context">
+        <nav class="navigation">
+          <ul class="navigation__list footer__navigation">
+            <li class="navigation__list-item">
+              <a href="#main" class="navigation__link smooth">Главная</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#about" class="navigation__link smooth">О нас</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#price" class="navigation__link smooth">Прайс-лист</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#barbers" class="navigation__link smooth">Барберы</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="#contacts" class="navigation__link smooth">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="social footer__social">
+          <li>
+            <a
+              href="#"
+              title="VKontakte"
+              target="_blank"
+              class="social__link"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="#"
+              title="Instagram"
+              target="_blank"
+              class="social__link"
+            ></a>
+          </li>
+        </ul>
+      </div> -->
+      <section class="franchise-footer" id="contacts">
+        <div class="page__section franchise-footer__wrapper">
+          <img
+            class="franchise-footer__logo"
+            src="img/logo_main.svg"
+            alt="Логотип"
+          />
+          <div class="franchise-footer__menu">
+            <ul class="franchise-footer__list">
+              <li>
+                <a class="franchise-footer__link-main">Меню</a>
+              </li>
+              <li>
+                <a class="franchise-footer__link" href="/main.html">Главная</a>
+              </li>
+              <li>
+                <a class="franchise-footer__link" href="/franchise.html"
+                  >Франшиза</a
+                >
+              </li>
+            </ul>
+            <ul class="franchise-footer__list">
+              <li>
+                <a class="franchise-footer__link-main">Информация</a>
+              </li>
+              <li>
+                <a class="franchise-footer__link" href="/policy.html"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li>
+                <a class="franchise-footer__link" href="/terms-of-use.html"
+                  >Условия использования</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://w557751.yclients.com/widgetJS"
+      charset="UTF-8"
+    ></script>
+  </body>
+</html>
