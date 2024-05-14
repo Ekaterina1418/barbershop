@@ -1,0 +1,73 @@
+.chips {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  &_position_header::before {
+    background-image: url('../../images/deco/chip_header.svg');
+  }
+
+  &_position_price::before {
+    background-image: url('../../images/deco/chips_price.svg');
+    background-position: right bottom;
+  }
+
+  &_position_footer::before {
+    top: -1px;
+    background-image: url('../../images/deco/chips_footer.svg');
+    background-position: left 50% bottom;
+  }
+}
+
+@include atTablet700 {
+  .chips {
+    &::before {
+      background-position: center;
+    }
+
+    &_position_header::before {
+      background-size: 635px 100%;
+    }
+
+    &_position_price::before {
+      bottom: -2px;
+      background-size: 656px 100%;
+    }
+
+    &_position_footer::before {
+      top: -2px;
+      background-size: 608px 100%;
+    }
+  }
+}
+
+@include atDesktop1200 {
+  .chips {
+    &_position_header::before {
+      height: 11px;
+      background-position: right 20% bottom;
+      background-size: 996px 100%;
+    }
+
+    &_position_price::before {
+      background-position: right 45% bottom;
+      background-size: 1127px 100%;
+    }
+
+    &_position_footer::before {
+      background-position: right 38% bottom;
+      background-size: 998px 100%;
+    }
+  }
+}

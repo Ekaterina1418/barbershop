@@ -1,0 +1,106 @@
+.franchise {
+  &-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-bg {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__subtitle {
+    color: $color_white;
+    font-weight: 300;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-family: $font_title;
+    color: $color_white;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: $color_white;
+    text-transform: uppercase;
+
+    & span::after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
+  &-title__color {
+    color: $color_accent-dark;
+    &::before {
+      background-color: $color_accent-dark;
+      width: 35px;
+      left: -42px;
+    }
+    &::after {
+      background-color: $color_accent-dark;
+      width: 35px;
+      right: -42px;
+    }
+  }
+}
+
+@include atTablet700 {
+  .franchise__title {
+    font-size: 30px;
+  }
+  .franchise-title__color {
+    &::before {
+      left: -55px;
+      width: 45px;
+    }
+    &::after {
+      right: -55px;
+      width: 45px;
+    }
+  }
+}
+
+@include atDesktop1200 {
+  .franchise {
+    color: $color_white;
+    &-section {
+      display: grid;
+      grid-template-columns: 75% 25%;
+      grid-template-rows: 1fr 1fr;
+
+      &__text {
+        grid-area: 2/1;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+      }
+      &__logo {
+        justify-self: center;
+        align-self: start;
+      }
+    }
+    &__title {
+      margin: 0 0 20px;
+      font-size: 45px;
+      line-height: 1.15;
+    }
+    &__subtitle {
+      margin-bottom: 0;
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+  .franchise-title__color {
+    &::before {
+      width: 55px;
+      left: -67px;
+    }
+    &::after {
+      width: 55px;
+      right: -67px;
+    }
+  }
+}

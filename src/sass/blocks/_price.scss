@@ -1,0 +1,138 @@
+.price {
+  padding: 50px 0;
+  background-color: #f3f3f3;
+  &__title {
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    color: $color_accent-dark;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 1px);
+      right: calc(-66px - 10px);
+      width: 66px;
+      height: 3px;
+      background-color: $color_accent-dark;
+    }
+
+    &::before {
+      left: calc(-66px - 10px);
+    }
+  }
+}
+
+.price__table {
+  width: 100%;
+  margin-top: 50px;
+  text-transform: uppercase;
+  border-collapse: collapse;
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
+
+  tr {
+    border-bottom: 1px solid #5754542d;
+  }
+
+  td {
+    &:nth-child(2) {
+      padding-right: 13px;
+      padding-left: 5px;
+      width: 60px;
+    }
+  }
+
+  tbody tr {
+    vertical-align: bottom;
+  }
+}
+.price__table-services {
+  font-size: 16px;
+  color: $color_title;
+  font-weight: 700;
+}
+.price__table-barber {
+  font-size: 12px;
+  font-family: $font_inter, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #666;
+}
+.price__table-header {
+  padding-bottom: 10px;
+  line-height: 1.05;
+
+  &:nth-child(n + 2) {
+    text-align: center;
+  }
+}
+
+.price__table-cell {
+  max-width: 230px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &:nth-child(n + 2) {
+    text-align: center;
+  }
+}
+
+@include atTablet700 {
+  .price__table {
+    td {
+      &:nth-child(2) {
+        padding-right: 42px;
+      }
+
+      &:last-of-type {
+        padding-left: 32px;
+        width: 110px;
+      }
+    }
+  }
+
+  .price__table-header {
+    padding-bottom: 20px;
+  }
+}
+
+@include atDesktop1200 {
+  .price {
+    padding: 100px 0;
+  }
+
+  .price__table {
+    &:first-of-type {
+      margin-top: 50px;
+    }
+
+    td {
+      &:nth-child(2) {
+        width: 270px;
+        padding-right: 14px;
+      }
+
+      &:last-of-type {
+        width: 270px;
+        padding-left: 14px;
+      }
+    }
+  }
+
+  .price__table-header {
+    font-size: 25px;
+  }
+
+  .price__table-cell {
+    font-size: 25px;
+  }
+  .price__table-services {
+    font-weight: 700;
+  }
+  .price__table-barber {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

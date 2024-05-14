@@ -1,0 +1,65 @@
+.franchise-banner {
+  position: relative;
+  background: url('../../images/bg/bg-banner.png') no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color_title;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: $font_title;
+    color: $color_white;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__paragraph {
+    color: $color_white;
+    font-size: 25px;
+    text-shadow: 6px 0px 2px #575454;
+    text-align: center;
+    margin: 0 0 25px 0;
+  }
+  &--color {
+    background-color: $color_accent;
+    &:hover,
+    :active {
+      background-color: $color_accent_dark;
+    }
+  }
+}
+@include atDesktop1200 {
+  .franchise-banner {
+    padding: 100px 0;
+  }
+  .franchise-banner__wrapper {
+    flex-direction: row;
+  }
+  .franchise-banner__title {
+    font-size: 40px;
+    text-align: left;
+  }
+  .franchise-banner__paragraph {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}

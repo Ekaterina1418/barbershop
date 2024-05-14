@@ -1,0 +1,130 @@
+.barbers {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.barbers__paragraph-main {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 36px;
+}
+.barbers__paragraph-secondary {
+    font-size: 20px;
+    text-align: center;
+    max-width: 819px;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+
+.barbers__list {
+  margin: 50px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.barbers__list-item {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 30px rgba($color_black, 0.1);
+}
+
+.barbers__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.barbers__name {
+  margin-top: 20px;
+  padding: 0 20px;
+  font-size: 25px;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.barbers__grade {
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 1.05;
+  text-transform: uppercase;
+
+  &_top {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-image: url('../../images/icons/star.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.barbers__social {
+  margin: 20px 0;
+  gap: 20px;
+  min-height: 30px;
+
+  & .social__link {
+    width: 30px;
+    height: 30px;
+    mask-size: 30px;
+    -webkit-mask-size: 30px;
+    background-color: $color_controls;
+
+    &:target,
+    &:hover {
+      background-color: $color_title;
+    }
+
+    &:active {
+      background-color: $color_dark-bg;
+    }
+  }
+}
+
+@include atTablet700 {
+  .barbers__list {
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+}
+
+@include atDesktop1200 {
+  .barbers {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .barbers__list {
+    margin-top: 50px;
+  }
+
+  .barbers__list-item {
+    width: 270px;
+  }
+  .barbers__paragraph-main {
+  font-size: 36px;
+ 
+}
+.barbers__paragraph-secondary {
+    font-size: 24px;
+   
+}
+}

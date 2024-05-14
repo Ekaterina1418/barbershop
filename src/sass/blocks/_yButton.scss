@@ -1,0 +1,77 @@
+.yButton {
+  display: none;
+
+  .yButtonBackground {
+    background-color: rgba($color_ylients, 0.7) !important;
+    background-image: url('../../images/icons/logo_ybutton.svg');
+    background-repeat: no-repeat;
+    background-position: top 10px center;
+    background-size: 45px auto;
+    opacity: 1 !important;
+  }
+
+  .yButtonText {
+    margin: 0 auto;
+    top: 56px !important;
+    font-size: 14px !important;
+    font-family: $font_main !important;
+    line-height: 1.1 !important;
+    letter-spacing: normal !important;
+    max-width: 45px !important;
+    text-transform: uppercase !important;
+  }
+
+  .yButtonWave {
+    left: 0 !important;
+    top: 0 !important;
+    color: transparent !important;
+    width: 100px !important;
+    height: 100px !important;
+    border: none !important;
+    animation: none !important;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 47.5px;
+      top: 47.5px;
+      width: 100px;
+      height: 100px;
+      border: 2px solid $color_accent;
+      border-radius: 100%;
+      animation: ball-scale-ripple 1.25s 0s infinite
+          cubic-bezier(0.21, 0.53, 0.56, 0.8),
+        color-change 2.5s 0s linear infinite;
+    }
+  }
+}
+
+@keyframes ball-scale-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    border-color: $color_accent;
+  }
+  100% {
+    border-color: $color_accent-dark;
+  }
+}
+
+@include atTablet700 {
+  .yButton {
+    display: block;
+  }
+}

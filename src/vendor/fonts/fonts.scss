@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'MarvinSlab';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('MarvinSlab_Thin.otf') format('otf'),
+    url('MarvinSlab_Thin.woff') format('woff'),
+    url('./MarvinSlab_Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'MarvinSlab';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('MarvinSlab_Light.otf') format('otf'),
+    url('MarvinSlab_Light.woff') format('woff'),
+    url('./MarvinSlab_Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MarvinSlab';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('MarvinSlab_Black.otf') format('oft'),
+    url('MarvinSlab_Black.woff') format('woff'),
+    url('./MarvinSlab_Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'VinSansPro';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('VinSansPro_Regular.otf') format('oft'),
+    url('VinSansPro_Regular.woff') format('woff'),
+    url('VinSansPro_Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'VinSansPro';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('VinSansPro_Medium.otf') format('otf'),
+    url('VinSansPro_Medium.woff') format('woff'),
+    url('VinSansPro_Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'VinSansPro';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('VinSansPro_Bold.otf') format('otf'),
+    url('VinSansPro_Bold.woff') format('woff'),
+    url('VinSansPro_Bold.woff2') format('woff2');
+}

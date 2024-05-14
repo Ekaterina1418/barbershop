@@ -1,0 +1,26 @@
+.map {
+  margin-top: -50px;
+  width: 100%;
+  height: calc(390px + 50px);
+
+  p {
+    display: none;
+  }
+}
+
+[class*='ymaps-2-1'][class*='-ground-pane'] {
+  filter: grayscale(100%);
+}
+
+@include atTablet700 {
+  .map {
+    height: calc(530px + 50px);
+  }
+}
+
+@include atDesktop1200 {
+  .map {
+    order: 2;
+    width: 720px;
+  }
+}

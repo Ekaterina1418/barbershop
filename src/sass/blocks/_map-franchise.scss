@@ -1,0 +1,27 @@
+@include atTablet700 {
+  // .wrap-map {
+  //   max-width: 900px;
+  // }
+}
+@include atDesktop1200 {
+  .wrap-map {
+    max-width: 1500px;
+  }
+}
+
+.franchise-map {
+  width: 50vw;
+  height: 500px;
+  padding: 30px 0;
+}
+
+[class*='copyrights-pane'] {
+  display: none !important;
+}
+
+[class*='ground-pane'] {
+  filter: grayscale(0.5) !important;
+}
+.ymaps3x0--map-copyrights__container {
+  display: none;
+}

@@ -1,0 +1,89 @@
+.franchise-offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+  }
+  &__paragraph {
+    font-size: 19px;
+    font-weight: 300;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 850px;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__percent {
+    font-family: $font_title;
+    font-size: 40px;
+    font-weight: 900;
+    color: $color_controls;
+    margin-right: 40px;
+  }
+  &__statistics {
+    color: $color_controls;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__accent {
+    max-width: 700px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    overflow-wrap: break-word;
+    color: $color_accent-dark;
+  }
+}
+@include atTablet700 {
+  .franchise-offer__title {
+    font-size: 35px;
+  }
+  .franchise-offer__accent {
+    font-size: 20px;
+  }
+}
+@include atDesktop1200 {
+  .franchise-offer {
+    &__title {
+      font-size: 35px;
+    }
+    &__text {
+      margin-top: 30px;
+      margin-bottom: 45px;
+    }
+    &__list {
+      flex-direction: initial;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-bottom: 45px;
+    }
+    &__percent {
+      font-size: 60px;
+    }
+    &__accent {
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import '~swiper/swiper-bundle.min.css';
+.slider {
+  max-width: 285px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.slider__image {
+  max-width: 250px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.slider__indicators {
+  margin: 15px auto 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 2px solid $color_controls;
+  border-radius: 100%;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color_controls;
+}
+
+@include atTablet700 {
+  .slider {
+    max-width: 450px;
+  }
+
+  .slider__image {
+    max-width: 450px;
+    height: 320px;
+  }
+
+  .slider__indicators {
+    li {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+@include atDesktop1200 {
+  .slider {
+    max-width: 540px;
+    margin-right: 35px;
+  }
+
+  .slider__image {
+    max-width: 100%;
+    height: 450px;
+  }
+
+  .slider__indicators {
+    margin-top: 30px;
+  }
+  .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+  }
+}
