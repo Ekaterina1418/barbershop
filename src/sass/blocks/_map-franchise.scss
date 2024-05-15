@@ -25,3 +25,31 @@
 .ymaps3x0--map-copyrights__container {
   display: none;
 }
+.custom-balloon {
+  font-family: $font_title;
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  color: $color_controls;
+  background-color: #fff;
+}
+.custom-balloon p {
+  text-align: left;
+  word-wrap: break-word; /* or word-wrap: normal */
+  max-width: 180px; /* Adjust as needed */
+}
+ymaps[class$='balloon__content'] {
+  height: 40px;
+  padding: 5px;
+}
+
+ymaps[class$='balloon__layout'] {
+  padding: 0;
+  border-radius: 10px;
+}
+.ymaps-2-1-79-balloon {
+  border-radius: 10px;
+}
+ymaps[class$='balloon__tail']::after {
+}
