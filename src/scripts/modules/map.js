@@ -95,7 +95,7 @@ export function initMap() {
         e.preventDefault(); // Предотвращаем стандартное действие браузера
         setTimeout(() => {
           window.location.href =
-            'https://ekaterina1418.github.io/barbershop/franchise.html'; // Изменяем URL-адрес текущей страницы
+            'https://ekaterina1418.github.io/barbershop2/franchise.html'; // Изменяем URL-адрес текущей страницы
         }, 100); // Задержка в 100 миллисекунд
       });
       map.geoObjects.add(myPlacemark);
