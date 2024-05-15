@@ -34,6 +34,7 @@ export function initMap() {
       center: [54.745116429457326, 55.86374357202281],
       zoom: 3,
       behaviors: ['default', 'scrollZoom'], // Включаем поведения, включая скролл карты
+      autoFitToViewport: 'always',
     });
 
     for (let i = 0; i < coordinates.length; i++) {
@@ -76,10 +77,25 @@ export function initMap() {
         myPlacemark.balloon.close();
       });
 
+      myPlacemark.events.add('touchstart', function (e) {
+        const balloonContent = `<div class="custom-balloon">
+                                  <p>${textSnippet} ${coords}</p>
+                                </div>`;
+        map.balloon.open(
+          coordinates[i].coords, // Позиция балуна
+          balloonContent, // Содержимое балуна
+          {
+            closeButton: false,
+            offset: [0, -40], // Смещение балуна вверх относительно метки
+          },
+        );
+      });
+
       myPlacemark.events.add('click', function (e) {
         e.preventDefault(); // Предотвращаем стандартное действие браузера
         setTimeout(() => {
-          window.location.href = '/franchise.html'; // Изменяем URL-адрес текущей страницы
+          window.location.href =
+            'https://ekaterina1418.github.io/barbershop/franchise.html'; // Изменяем URL-адрес текущей страницы
         }, 100); // Задержка в 100 миллисекунд
       });
       map.geoObjects.add(myPlacemark);

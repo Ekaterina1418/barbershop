@@ -1,18 +1,6 @@
-@include atTablet700 {
-  // .wrap-map {
-  //   max-width: 900px;
-  // }
-}
-@include atDesktop1200 {
-  .wrap-map {
-    max-width: 1500px;
-  }
-}
-
 .franchise-map {
-  width: 50vw;
-  height: 500px;
-  padding: 30px 0;
+  width: 90vw;
+  height: 300px;
 }
 
 [class*='copyrights-pane'] {
@@ -26,21 +14,21 @@
   display: none;
 }
 .custom-balloon {
-  font-family: $font_title;
+  font-family: $font_main;
 
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1;
   color: $color_controls;
   background-color: #fff;
 }
 .custom-balloon p {
   text-align: left;
-  word-wrap: break-word; /* or word-wrap: normal */
-  max-width: 180px; /* Adjust as needed */
+  word-wrap: break-word;
+  max-width: 150px;
 }
 ymaps[class$='balloon__content'] {
-  height: 40px;
+  height: 45px;
   padding: 5px;
 }
 
@@ -51,5 +39,15 @@ ymaps[class$='balloon__layout'] {
 .ymaps-2-1-79-balloon {
   border-radius: 10px;
 }
-ymaps[class$='balloon__tail']::after {
+@include atTablet700 {
+  .franchise-map {
+    max-width: 600px;
+    height: 400px;
+  }
+}
+@include atDesktop1200 {
+  .franchise-map {
+    max-width: 1000px;
+    height: 500px;
+  }
 }
