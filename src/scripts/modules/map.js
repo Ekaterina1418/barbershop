@@ -56,7 +56,7 @@ function createPlacemark(coord, textSnippet, map) {
   function closeBalloon() {
     closeBalloonTimeout = setTimeout(() => {
       map.balloon.close();
-    }, 300);
+    }, 3000);
   }
 
   myPlacemark.events.add('mouseenter', openBalloon);

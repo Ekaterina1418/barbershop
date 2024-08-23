@@ -101,8 +101,7 @@
 }
 
 .slider__image {
-  max-width: 290px;
-  height: 190px;
+  max-width: 100%;
   mask-image: url('../../../images/icons/frame/frame-slider.svg');
   mask-size: cover;
   mask-repeat: no-repeat;
