@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 78 100"
+     style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#D94220;fill-rule:nonzero}
+    .fil1 {fill:white;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1604245416576">
+   <polygon class="fil0" points="78,19.933 78,49.475 69.957,57.445 78,57.445 78,100 14.901,100 0,85.193 0,14.807 14.901,0 63.099,0 78,14.807 "/>
+   <polygon class="fil1" points="65.543,19.933 65.543,44.388 57.919,51.942 26.631,53.82 26.631,78.253 51.37,75.756 51.37,69.824 65.543,69.824 65.543,87.621 20.059,87.621 12.457,80.067 12.457,48.186 20.059,40.632 51.37,40.632 51.37,23.625 26.631,21.811 26.631,31.178 12.457,34.998 12.457,19.933 20.059,12.379 57.941,12.379 "/>
+  </g>
+ </g>
+</svg>
