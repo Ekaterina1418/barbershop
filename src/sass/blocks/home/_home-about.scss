@@ -1,0 +1,114 @@
+.home-about {
+  background: url('../../../images/bg/bg_about.jpg') no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 0;
+  &::after {
+    content: '';
+    background: url('../../../images/trimmer.png') no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: clamp(180px, 20vw, 350px);
+    height: clamp(100px, 20vh, 130px);
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+  }
+  &__title {
+    color: $color_title;
+    font-family: $font_title;
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 15px;
+  }
+  &__list {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  &__plashka {
+    width: 200px;
+    height: 140px;
+    margin-bottom: 150px;
+  }
+}
+@include atTablet700 {
+  .home-about {
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    background-position: 70%;
+    &__wrapper {
+      justify-content: flex-end;
+      width: 60%;
+    }
+    &::after {
+      position: absolute;
+      height: 180px;
+      right: 0;
+    }
+    &__plashka {
+      width: 180px;
+      height: 200px;
+      margin: 0;
+    }
+    &__title {
+      margin: 0 0 30px;
+      font-size: 30px;
+    }
+    &__item {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+}
+
+@include atDesktop1200 {
+  .home-about {
+    &::after {
+      height: 250px;
+    }
+    &__wrapper {
+      width: 60%;
+    }
+    &__list {
+      gap: 25px;
+    }
+
+    &__plashka {
+      width: 300px;
+    }
+    &__title {
+      margin: 0 0 40px;
+      font-size: 40px;
+    }
+  }
+}

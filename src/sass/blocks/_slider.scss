@@ -1,0 +1,78 @@
+@import '~swiper/swiper-bundle.min.css';
+
+.mySwiper {
+  max-width: 290px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.slider__indicators {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 0;
+  transition: 0.3s linear;
+  opacity: inherit;
+  cursor: pointer;
+  --swiper-pagination-bullet-horizontal-gap: 12px;
+}
+
+.swiper-pagination-bullet--color-main {
+  background-color: $color_dark-bg;
+}
+.swiper-pagination-bullet--active-main {
+  width: 12px;
+  height: 12px;
+  background-color: $color_white;
+}
+
+@include atTablet700 {
+  .mySwiper {
+    max-width: 530px;
+  }
+
+  .slider__indicators li {
+    justify-content: flex-end;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@include atDesktop1200 {
+  .mySwiper {
+    max-width: 700px;
+    gap: 15px;
+  }
+
+  .slider__indicators {
+    justify-content: flex-end;
+    --swiper-pagination-bullet-horizontal-gap: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
+  .swiper-pagination-bullet--active-main {
+    width: 16px;
+    height: 16px;
+  }
+}

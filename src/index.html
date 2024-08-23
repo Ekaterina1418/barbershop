@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="frame-src 'self' https://www.google.com https://maps.google.com;"
+    />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7cd0a52b-622e-46d6-a057-d3362d334fc2&lang=ru_RU"></script>
+    <title>Брикстон</title>
+  </head>
+  <body class="page">
+    <header id="main">
+      <div class="header__wrapper">
+        <div class="page__section">
+          <div class="header__navigation">
+            <button class="header__burger" type="button">
+              <span class="header__burger__span"></span>
+              <span class="header__burger__span"></span>
+              <span class="header__burger__span"></span>
+            </button>
+
+            <div class="header__menu">
+              <nav class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__list-item">
+                    <a href="/index.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="3" class="navigation__link open-popup">Филиалы</a>
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="/franchise.html" class="navigation__link"
+                      >Франшиза</a
+                    >
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="#" class="navigation__link">О нас</a>
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="#" class="navigation__link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <ul class="social header__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home__content">
+        <div class="page__section">
+          <div class="geolacation">
+            <a href="#" title="Location" class="geolacation__link open-popup">
+              <p>Уфа</p></a
+            >
+          </div>
+          <div class="header__wrapper-main">
+            <div class="home-header__content">
+              <img
+                class="header__logo"
+                src="<%=require('./images/icons/logo/logo_home.svg')%>"
+                alt="Brixton Barbershop лого"
+              />
+              <h1 class="header__title">
+                Превосходство<br />
+                в деталях!
+              </h1>
+            </div>
+            <div class="header__cashback"></div>
+            <div class="header__review">
+              <img
+                class="dynamic-size"
+                src="<%=require('./images/icons/frame/frame-large.svg')%>"
+                alt="Brixton Barbershop лого"
+              />
+              <div class="text-overlay">
+                <p class="header__comment">Your Text Here</p>
+
+                <hr class="header__line" />
+                <p class="header__data"></p>
+              </div>
+            </div>
+
+            <div class="header__mobile-app">
+              <img
+                class="header__mobile-img"
+                src="<%=require('./images/icons/home/hand.svg')%>"
+                alt="Мобильное приложение"
+              />
+              <div class="header__wrap-app">
+                <p class="header__mobile-text">
+                  Скачать наше мобильное приложение
+                </p>
+                <a
+                  class="header__app"
+                  href="https://play.google.com/store/apps/details?id=com.yclients.mobile.g694866&hl=ru&pli=1"
+                >
+                  <img
+                    src="<%=require('./images/icons/icons-store/google_play.svg')%>"
+                    alt="Google play"
+                  />
+                </a>
+                <a
+                  class="header__app"
+                  href="https://apps.apple.com/ru/app/brixton-barbershop/id6444655194?l=en-GB"
+                >
+                  <img
+                    src="<%=require('./images/icons/icons-store/app_store.svg')%>"
+                    alt="App store"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home-about">
+        <div class="page-section home-about__wrapper">
+          <div class="home-about__content">
+            <h2 class="home-about__title">Пару слов о нас</h2>
+            <ul class="home-about__list">
+              <li class="home-about__item">
+                <p>
+                  Brixton Barbershop&nbsp;&mdash; настоящий клуб джентельменов
+                  и&nbsp;обитель мастеров высочайшего уровня.
+                </p>
+              </li>
+              <li class="home-about__item">
+                <p>
+                  Записаться к&nbsp;нам, значит зайти к&nbsp;приятелям
+                  на&nbsp;огонёк, обсудить последние новости, почитать журнал,
+                  и&nbsp;всё это под отличную музыку и&nbsp;напитки.
+                </p>
+              </li>
+              <li class="home-about__item">
+                <p>
+                  Наши мастера чуткие, точные, аккуратные, прогрессивные
+                  и&nbsp;глубоко разбирающиеся в&nbsp;своём деле. Примем как
+                  старого приятеля, а&nbsp;обслужим как короля!
+                </p>
+              </li>
+              <li class="home-about__item">
+                <p>
+                  Пусть наш барбершоп BRIXTON станет для вас чем-то большим, чем
+                  просто старомодное место для стрижки.
+                </p>
+              </li>
+            </ul>
+            <img
+              class="home-about__plashka"
+              src="<%=require('./images/icons/home/plashka.svg')%>"
+              alt="Стрижём по всем правилам"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="home-slider">
+        <div class="page__section">
+          <h2 class="home-slider__title">Почему именно BRIXTON?</h2>
+          <div class="home-slider__wrapper">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper slider__wrapper-main">
+                <div class="swiper-slide" data-index="0">
+                  <div class="slide-number slide-1">
+                    <img
+                      class="slider__image"
+                      src="<%=require('./images/slides/slide-1.jpg')%>"
+                      alt="Первый слайд"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-index="1">
+                  <div class="slide-number slide-2">
+                    <img
+                      class="slider__image"
+                      src="<%=require('./images/slides/slide-2.jpg')%>"
+                      alt="Второй слайд"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-index="2">
+                  <div class="slide-number slide-3">
+                    <img
+                      class="slider__image"
+                      src="<%=require('./images/slides/slide-3.jpg')%>"
+                      alt="Третий слайд"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-index="3">
+                  <div class="slide-number slide-4">
+                    <img
+                      class="slider__image"
+                      src="<%=require('./images/slides/slide-4.jpg')%>"
+                      alt="Четвёртый слайд"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide" data-index="4">
+                  <div class="slide-number slide-5">
+                    <img
+                      class="slider__image"
+                      src="<%=require('./images/slides/slide-5.jpg')%>"
+                      alt="Пятый слайд"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="slider__indicators"></div>
+            </div>
+            <div class="home-slider__text">
+              <h3 class="home-slider__subtitle" id="slider-subtitle">
+                Высоко-квалифицированные мастера
+              </h3>
+              <p class="home-slider__paragraph" id="slider-paragraph-1">
+                В&nbsp;Brixton работают только опытные барберы, прошедшие
+                строгий отбор и&nbsp;обучение
+              </p>
+              <p class="home-slider__paragraph" id="slider-paragraph-2">
+                Они в&nbsp;совершенстве владеют современными техниками стрижки
+                и&nbsp;оформления бороды
+              </p>
+              <p class="home-slider__paragraph" id="slider-paragraph-3">
+                Мастера умеют подобрать индивидуальный стиль, учитывая
+                особенности и&nbsp;пожелания каждого клиента.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap-map">
+        <div class="page__section">
+          <h2 class="map-title">Карта филиалов</h2>
+          <div class="map-content">
+            <div class="map-main" id="map-main"></div>
+            <div class="map-info">
+              <ul class="map-info__list">
+                <li class="map-info__item">
+                  <p class="map-info__street">Уфа, ул. Менделеева, 145</p>
+                </li>
+                <li class="map-info__item">
+                  <p class="map-info__number">+7 (917) 747-25-25</p>
+                </li>
+                <li class="map-info__item">
+                  <p class="map-info__opening">Ежедневно с 10.00 до 21.00</p>
+                </li>
+                <li>
+                  <a
+                    class="franchise-company__link franchise-company__link--color home-vacancy__link"
+                    href="#main"
+                    type="button"
+                  >
+                    <p>Онлайн запись</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-franchise">
+        <div class="page__section">
+          <h2 class="map-title">
+            А&nbsp;может быть ты&nbsp;сам хочешь<br />
+            стать владельцем нового филиала BRIXTON?
+          </h2>
+          <div class="map-info__content">
+            <div class="map-info__img">
+              <img
+                src="<%=require('./images/icons/home/franchise-logo.svg')%>"
+                alt="Логотип франчайз"
+              />
+            </div>
+            <ul class="map-info__offer map-info__list">
+              <li class="map-info__item">
+                <p class="map-info__opening">
+                  Мы&nbsp;предлагаем вам готовый<br />
+                  бизнес-план, обучение<br />
+                  и&nbsp;поддержку на&nbsp;всех этапах запуска<br />
+                  и&nbsp;развития вашего предприятия.<br /><br />
+                </p>
+              </li>
+              <li class="map-info__item">
+                <p class="map-info__opening">
+                  Не&nbsp;упустите свой шанс начать<br />
+                  успешный бизнес в&nbsp;сфере красоты<br />
+                  и&nbsp;мужского стиля! Свяжитесь с&nbsp;нами<br />
+                  для получения подробной информации<br />
+                  и&nbsp;начала сотрудничества.
+                </p>
+              </li>
+              <li class="map-info__item">
+                <a
+                  class="franchise-company__link franchise-company__link--color home-vacancy__link"
+                  href="#main"
+                  type="button"
+                >
+                  <p>Онлайн запись</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="home-vacancy">
+        <div class="page__section">
+          <div class="home-vacancy__content">
+            <div class="home-vacancy__text">
+              <p class="home-vacancy__paragraph">
+                Уверен в&nbsp;своих силах и&nbsp;готов работать<br />
+                в&nbsp;команде профессионалов,<br />
+                расти и&nbsp;развиваться вместе с&nbsp;нами?<br />
+                Тогда мы&nbsp;рады сообщить что<br />
+                <span class="home-vacancy__paragraph--large">BRIXTON</span
+                ><br />
+                <span class="home-vacancy__paragraph--small">ищет</span><br />
+                <span class="home-vacancy__paragraph--middle">
+                  лучшего барбера</span
+                >
+              </p>
+              <a
+                class="franchise-company__link franchise-company__link--color home-vacancy__link"
+                href="#main"
+                type="button"
+              >
+                <p>Онлайн запись</p>
+              </a>
+            </div>
+            <div class="home-vacancy__img">
+              <img
+                src="<%=require('./images/barber-wanted.png')%>"
+                alt="Барбер"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slider-barbers">
+        <div class="page__section">
+          <div class="barber-slider">
+            <div class="swiper-wrapper barber-slider__wrapper">
+              <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                  <img
+                    class="barber-slider__image"
+                    src="<%=require('./images/barber-slider/slide_2.jpg')%>"
+                    alt="Стрижка машинкой"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                  <img
+                    class="barber-slider__image"
+                    src="<%=require('./images/barber-slider/slide_3.jpg')%>"
+                    alt="Стрижка бритвой"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                  <img
+                    class="barber-slider__image"
+                    src="<%=require('./images/barber-slider/slide_4.jpg')%>"
+                    alt="Brixton Barbershop"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                  <img
+                    class="barber-slider__image"
+                    src="<%=require('./images/barber-slider/slide_5.jpg')%>"
+                    alt="Креативная стрижка"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                  <img
+                    class="barber-slider__image"
+                    src="<%=require('./images/barber-slider/slide_1.jpg')%>"
+                    alt="Стрижка ножницами"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-image-wrapper">
+                  <img
+                    class="barber-slider__image"
+                    src="<%=require('./images/barber-slider/slide_4.jpg')%>"
+                    alt="Ножницы в руке"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination slider__indicators-secondary"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="popup" class="popup">
+      <div class="popup__content">
+        <span class="popup__close">&times;</span>
+        <img
+          src="<%=require('./images/icons/logo/logo_footer.svg')%>"
+          alt="Логотип филиалов"
+          class="popup__logo"
+        />
+        <p class="popup__text">Выбери свой&nbsp;<span>барбершоп</span></p>
+        <ul class="popup__list">
+          <li class="popup__item"><a class="popup__city" href="#">Уфа</a></li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">ул. Менделеева 145</a>
+          </li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">ул. Энтузиастов 7 </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer home-footer">
+      <div class="page__section footer__wrapper">
+        <div
+          class="footer__menu footer__menu--gap-large home-footer__first-border"
+        >
+          <ul class="footer__list">
+            <li class="footer__link-main">Меню</li>
+            <li><a class="footer__link" href="/index.html">Главная</a></li>
+            <li><a class="footer__link" href="/franchise.html">Франшиза</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__link-main">Информация</li>
+            <li>
+              <a class="footer__link" href="/policy.html"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a class="footer__link" href="/terms-of-use.html"
+                >Условия использования</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__stamp">
+          <img
+            src="<%=require('./images/icons/home/brixton-stamp.svg')%>"
+            alt="Логотип печать"
+          />
+        </div>
+        <div
+          class="footer__menu footer__menu--gap-small home-footer__last-border"
+        >
+          <img
+            class="footer__social"
+            src="<%=require('./images/icons/social/vkontakte.svg')%>"
+            alt="Вконтакте"
+          />
+          <img
+            class="footer__social"
+            src="<%=require('./images/icons/social/instagram.svg')%>"
+            alt="Инстаграм"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+.franchise-stages {
+  width: 100%;
+  display: flex;
+  padding: 50px 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  &__title {
+    font-family: $font_title;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color_controls;
+    margin: 0 0 10px;
+  }
+  &__list {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+  }
+  &__item {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $color_dark-bg;
+
+    &::marker {
+      font-family: $font_title;
+      font-size: 20px;
+      font-weight: 300;
+      color: $color_accent-dark;
+    }
+    &:last-child {
+      font-family: $font_title;
+      font-size: 25px;
+      font-weight: 300;
+      color: $color_accent-dark;
+    }
+  }
+}
+@include atTablet700 {
+  .franchise-stages {
+    &__title {
+      font-size: 30px;
+    }
+    &__item {
+      padding-right: 10px;
+      font-size: 24px;
+      &::marker {
+        font-size: 24px;
+      }
+    }
+  }
+}
+@include atDesktop1200 {
+  .franchise-stages {
+    &__title {
+      font-size: 35px;
+    }
+    &__list {
+      gap: 20px;
+    }
+    &__item {
+      padding-left: 0;
+      font-size: 30px;
+      &::marker {
+        font-size: 30px;
+      }
+    }
+  }
+}

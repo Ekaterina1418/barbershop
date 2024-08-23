@@ -1,0 +1,59 @@
+@import '../vendor/normalize.scss';
+@import '../sass/base/mixines';
+@import '../sass/base/variables';
+
+@import '../sass/blocks/page';
+
+@import '../sass/blocks/navigation';
+@import '../sass/blocks/contacts';
+@import '../sass/blocks/social';
+@import '../sass/blocks/geolocation';
+
+@import '../sass/blocks/header';
+@import '../sass/blocks/lead';
+@import '../sass/blocks/about';
+@import '../sass/blocks/price';
+@import '../sass/blocks/advantages';
+@import '../sass/blocks/barbers';
+@import '../sass/blocks/contacts-section';
+@import '../sass/blocks/map';
+@import '../sass/blocks/footer';
+
+@import '../sass/blocks/chips';
+
+@import '../sass/blocks/franchise';
+@import '../sass/blocks/form-franchise';
+@import '../sass/blocks/franchise-possibilities';
+@import '../sass/blocks/franchise-decor';
+@import '../sass/blocks/franchise-company';
+@import '../sass/blocks/franchise-advantages';
+@import '../sass/blocks/franchise-form-bottom';
+@import '../sass/blocks/franchise-about';
+@import '../sass/blocks/franchise-policy';
+@import '../sass/blocks/slider';
+
+@import '../sass/blocks/home/home-header';
+@import '../sass/blocks/home/home-price';
+@import '../sass/blocks/home/home-slider';
+@import '../sass/blocks/home/home-franchise';
+@import '../sass/blocks/home/home-vacancy';
+@import '../sass/blocks/home/barber-slider';
+@import '../sass/blocks/home/home-footer';
+@import '../sass/blocks/home/home-about';
+
+@import '../sass/blocks/branch/branch-header';
+@import '../sass/blocks/branch/branch-info';
+@import '../sass/blocks/branch/branch-footer';
+
+@import '../sass/blocks/franchise/franchise-header';
+@import '../sass/blocks/franchise/franchise-advantages';
+@import '../sass/blocks/franchise/advantages-slider';
+@import '../sass/blocks/franchise/franchise-offer';
+@import '../sass/blocks/franchise/franchise-profit';
+@import '../sass/blocks/franchise/franchise-slider';
+@import '../sass/blocks/franchise/franchise-top_list';
+@import '../sass/blocks/franchise/franchise-conditions';
+@import '../sass/blocks/franchise/franchise-stages';
+@import '../sass/blocks/franchise/franchise-order';
+
+@import '../sass/blocks/popup/popup.scss';

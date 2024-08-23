@@ -1,0 +1,82 @@
+.franchise-possibilities {
+  padding: 50px 0;
+  &__title-main {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    max-width: 450px;
+    align-items: center;
+    position: relative;
+  }
+
+  &__item::before {
+    content: attr(data-index);
+    position: absolute;
+    top: 0;
+    left: -45px;
+    font-size: 70px;
+    font-weight: 300;
+    opacity: 0.3;
+    color: $color_controls;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $color_controls;
+    margin-bottom: 10px;
+  }
+  &__paragraph {
+    font-size: 18px;
+  }
+  &-title__color {
+    color: $color_accent-dark;
+    max-width: 170px;
+    &::before {
+      background-color: $color_accent-dark;
+      width: 66px;
+      left: -77px;
+    }
+    &::after {
+      background-color: $color_accent-dark;
+      width: 66px;
+      right: -77px;
+    }
+  }
+}
+
+@include atDesktop1200 {
+  .franchise-possibilities {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .franchise-possibilities__title-main {
+    margin-bottom: 80px;
+  }
+  .franchise-possibilities__list {
+    gap: 50px;
+    justify-content: space-between;
+    margin: 0 auto 100px;
+  }
+  .franchise-possibilities__title {
+    font-size: 27px;
+  }
+}

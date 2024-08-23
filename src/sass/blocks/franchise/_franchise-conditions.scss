@@ -1,0 +1,120 @@
+.franchise-conditions {
+  position: relative;
+  padding: 50px 0 0;
+  &__wrapper {
+    margin: 0 auto;
+  }
+  &__title {
+    text-align: center;
+    font-family: $font_title;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color_title;
+    margin: 0 0 20px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    padding: 0;
+    position: relative;
+    &::before {
+      content: '';
+      background: url('../../../images/franchise/decor/stamp-dark.svg')
+        no-repeat;
+      background-size: contain;
+
+      width: clamp(80px, 20vw, 100px);
+      height: 75px;
+      position: absolute;
+      top: 90%;
+      left: 45%;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &:not(:first-child)::before {
+      content: '';
+      border-top: 1px solid $color_controls;
+      width: 100%;
+    }
+    &:last-of-type {
+      content: '';
+      border-bottom: 1px solid $color_controls;
+      width: 100%;
+    }
+  }
+  &__text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0 5px;
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color_dark-bg;
+  }
+  &__description {
+    font-size: 16px;
+    font-family: $font_title;
+    color: $color_accent-dark;
+  }
+  &__link {
+    margin: auto;
+  }
+  &__open {
+    width: 100%;
+    height: 100%;
+  }
+}
+@include between500and700 {
+  .franchise-conditions {
+    &__list::before {
+      width: clamp(80px, 20vw, 100px);
+      height: 100px;
+      top: 85%;
+      left: 45%;
+    }
+  }
+}
+@include atTablet700 {
+  .franchise-conditions {
+    &__list::before {
+      width: clamp(180px, 30vw, 280px);
+      height: 200px;
+      top: 53%;
+      left: 37%;
+    }
+    &__title {
+      font-size: 35px;
+    }
+    &__subtitle {
+      font-size: 24px;
+    }
+    &__description {
+      font-size: 24px;
+    }
+  }
+}
+@include atDesktop1200 {
+  .franchise-conditions {
+    padding: 70px 0 0;
+    &__list::before {
+      width: clamp(180px, 30vw, 280px);
+      height: 280px;
+    }
+  }
+  .franchise-conditions__paragraph {
+    margin-bottom: 50px;
+  }
+  .franchise-conditions__list {
+    margin: 0 auto 50px;
+  }
+}

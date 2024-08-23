@@ -1,0 +1,181 @@
+.form-bottom {
+  padding-bottom: 50px;
+  position: relative;
+  opacity: 0.9;
+  z-index: 1;
+
+  &:before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__wrapper-form {
+    width: 100%;
+    max-width: 380px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-size: 30px;
+    color: $color_controls;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 25px;
+    font-weight: 300;
+    color: $color_white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__index {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+  &__input--color {
+    border: none;
+    border: 1px solid #37787d54;
+    color: $color_white;
+    font-weight: 300;
+    font-size: 20px;
+    &::placeholder {
+      color: $color_white;
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+  &__checkbox--color {
+    color: $color_controls;
+  }
+  &__checkbox-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    color: $color_white;
+    font-size: 11px;
+    font-weight: 100;
+    &::before {
+      content: '';
+      width: 13px;
+      height: 13px;
+      transition: all 0.3s ease;
+      border: 2px solid $color_white;
+    }
+    &::after {
+      content: '\2713';
+      position: absolute;
+      top: 0;
+      left: 2px;
+      font-size: 16px;
+      color: $color_white;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+  }
+  &__link {
+    color: $color_white;
+    text-decoration: none;
+    font-weight: 100;
+    border-bottom: 1px solid $color_white;
+    &:hover {
+      border-bottom: 3px solid $color_white;
+      color: $color_accent_dark;
+    }
+  }
+  &__btn {
+    background-color: $color_accent_dark;
+  }
+  &__contacts {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  &__contacts--title {
+    color: $color_controls;
+    font-weight: 300;
+    font-size: 22px;
+  }
+
+  &__contacts--name {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 300;
+    color: $color_controls;
+  }
+}
+.form__franchise-checkbox:checked + .form-bottom__checkbox-container::before {
+  background-color: $color_title;
+}
+
+.form__franchise-checkbox:checked + .form-bottom__checkbox-container::after {
+  opacity: 1;
+}
+@include atTablet700 {
+}
+@include atDesktop1200 {
+  .form-bottom {
+    padding: 100px 0;
+    &::before {
+      background-size: contain;
+    }
+    &__checkbox-container {
+      font-size: 14px;
+      &::before {
+        width: 16px;
+        height: 16px;
+      }
+      &::after {
+        font-size: 20px;
+      }
+    }
+    &__wrapper {
+      padding: 50px 0;
+      margin: auto 0;
+    }
+    &__contacts {
+      justify-content: flex-start;
+    }
+    &__title {
+      font-size: 40px;
+    }
+    &__index {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &__contacts--title {
+      font-size: 25px;
+    }
+  }
+}

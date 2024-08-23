@@ -1,0 +1,18 @@
+.branch-footer {
+  background: url('../../../images/bg/bg_footer-blue.jpg') no-repeat;
+  background-size: cover;
+  &__first-border {
+    border-top: 1px solid $color_controls;
+    border-bottom: 1px solid $color_controls;
+  }
+  &__last-border {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+@include atTablet700 {
+  .branch-footer__last-border {
+    border-top: 1px solid $color_controls;
+    border-bottom: 1px solid $color_controls;
+  }
+}

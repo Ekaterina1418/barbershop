@@ -1,0 +1,170 @@
+.franchise-profit {
+  background: rgb(109, 30, 13);
+  background: linear-gradient(
+    90deg,
+    rgba(109, 30, 13, 1) 22%,
+    rgba(147, 40, 20, 1) 37%,
+    rgba(147, 40, 20, 1) 63%,
+    rgba(147, 40, 20, 1) 85%
+  );
+  position: relative;
+  padding: 50px 0;
+
+  &::before {
+    content: '';
+    background: url('../../../images/icons/deco/line-barbers-top.svg') no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 26px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    width: 100%;
+  }
+  &::after {
+    content: '';
+    background: url('../../../images/icons/deco/line-slider_bottom.svg')
+      no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: clamp(27px, 4vh, 30px);
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    width: 100%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 0;
+  }
+  &__logo {
+    display: none;
+    width: auto;
+    height: 130%;
+    position: absolute;
+    top: -5%;
+    left: 0;
+    z-index: 2;
+    transform: translateY(-5%);
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 15px;
+  }
+  li:nth-child(1) &__image-wrap {
+    width: clamp(150px, 15vh, 150px);
+    height: auto;
+  }
+  li:nth-child(2) &__image-wrap {
+    width: clamp(150px, 65vw, 250px);
+    height: auto;
+  }
+
+  &__image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  &__label {
+    font-family: $font_title;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $color_white;
+  }
+  &__description {
+    font-family: $font_title;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $color_white;
+  }
+  &__link {
+    margin: auto;
+  }
+  &__link--color {
+    background-color: $color_accent;
+  }
+}
+
+@include atTablet700 {
+  .franchise-profit {
+    &::after {
+      height: clamp(27px, 5vh, 38px);
+    }
+    &__content {
+      padding-left: clamp(120px, 20vw + 10px, 370px);
+    }
+    &__list {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+    &__item {
+      width: 400px;
+      column-gap: 50px;
+    }
+    li:nth-child(1) &__image-wrap {
+      width: clamp(130px, 20vw, 250px);
+      height: auto;
+    }
+    li:nth-child(2) &__image-wrap {
+      width: clamp(130px, 33vw, 400px);
+      height: auto;
+    }
+    &__logo {
+      display: block;
+    }
+
+    &__label {
+      font-size: 1.5rem;
+    }
+    &__description {
+      font-size: 1.2rem;
+    }
+  }
+  .franchise-profit__content {
+    text-align: left;
+  }
+}
+@include atDesktop1200 {
+  .franchise-profit {
+    padding: 70px 0;
+    &::after {
+      height: clamp(27px, 5vh, 42px);
+    }
+    &__content {
+      gap: 100px;
+      padding-left: clamp(140px, 30vw, 350px);
+    }
+    &__item {
+      width: 500px;
+    }
+    li:nth-child(1) &__image-wrap {
+      width: clamp(200px, 18vw, 400px);
+      height: auto;
+    }
+    li:nth-child(2) &__image-wrap {
+      width: clamp(300px, 32vw, 650px);
+      height: auto;
+    }
+    &__label {
+      font-size: 3rem;
+    }
+    &__description {
+      font-size: 2rem;
+    }
+  }
+}

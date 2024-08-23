@@ -1,0 +1,59 @@
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 13px;
+}
+
+.social__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 20px;
+  -webkit-mask-size: 20px;
+  border-radius: 100%;
+  background-color: $color_white;
+  transition: 0.3s linear;
+
+  &[title='VKontakte'] {
+    mask-image: url('../../images/icons/social/vkontakte.svg');
+    -webkit-mask-image: url('../../images/icons/social/vkontakte.svg');
+  }
+  &[title='Facebook'] {
+    mask-image: url('../../images/icons/social/facebook.svg');
+    -webkit-mask-image: url('../../images/icons/social/facebook.svg');
+  }
+  &[title='Instagram'] {
+    mask-image: url('../../images/icons/social/instagram.svg');
+    -webkit-mask-image: url('../../images/icons/social/instagram.svg');
+  }
+
+  &:target,
+  &:hover {
+    background-color: $color_accent;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: $color_accent-dark;
+    transform: scale(0.98);
+  }
+}
+
+@include atDesktop1200 {
+  .social {
+    gap: 20px;
+  }
+
+  .social__link {
+    width: 30px;
+    height: 30px;
+    mask-size: 30px;
+    -webkit-mask-size: 30px;
+  }
+}

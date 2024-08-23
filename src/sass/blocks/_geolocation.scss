@@ -1,0 +1,42 @@
+.geolacation {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $color_white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+  }
+  &__link::before {
+    content: '';
+    background-image: url('../../images/icons/location/geolocation.svg');
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    width: 40px;
+    height: 65px;
+  }
+  &__link p {
+    &:target,
+    &:hover {
+      color: $color_accent;
+    }
+
+    &:active {
+      color: $color_accent-dark;
+    }
+  }
+}
+@include atDesktop1200 {
+  .geolacation__link {
+    font-size: 30px;
+  }
+  .geolacation__link::before {
+    width: 50px;
+    height: 80px;
+  }
+}

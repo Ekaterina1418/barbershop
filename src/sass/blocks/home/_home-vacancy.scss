@@ -1,0 +1,144 @@
+.home-vacancy {
+  padding: 50px 0 0;
+  background-color: $color_title;
+  position: relative;
+  &::after {
+    content: '';
+    background: url('../../../images/icons/deco/line-slider_bottom.svg')
+      no-repeat;
+    background-position: center;
+    background-size: 300px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+  }
+}
+
+.home-vacancy__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.home-vacancy__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  line-height: 1.5;
+
+  color: $color_white;
+  margin-top: 0;
+}
+.home-vacancy__paragraph {
+  font-size: 18px;
+}
+.home-vacancy__paragraph--large {
+  font-family: $font_title;
+  font-size: 50px;
+  line-height: 0.8;
+}
+.home-vacancy__paragraph--small {
+  font-size: 25px;
+}
+.home-vacancy__paragraph--middle {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.home-vacancy__img {
+  display: flex;
+  position: static;
+  margin: auto;
+  max-width: 300px;
+  & img {
+    width: 100%;
+    height: auto;
+    position: static;
+    bottom: -60px;
+  }
+  .home-vacancy__link {
+    margin: auto;
+  }
+}
+
+@include atTablet700 {
+  .home-vacancy {
+    padding: 50px 0;
+  }
+  .home-vacancy::after {
+    height: 16px;
+    background-size: 700px;
+  }
+  .home-vacancy__content {
+    flex-direction: row;
+  }
+
+  .home-vacancy__text {
+    margin: 0;
+    justify-content: center;
+  }
+  .home-vacancy__paragraph {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .home-vacancy__paragraph--large {
+    font-size: 75px;
+  }
+  .home-vacancy__paragraph--small {
+    font-size: 25px;
+  }
+  .home-vacancy__paragraph--middle {
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+  .home-vacancy__link {
+    margin: 0;
+  }
+  .home-vacancy__img {
+    width: 320px;
+    max-width: 440px;
+    margin: 0;
+    position: relative;
+    & img {
+      position: absolute;
+      bottom: -50px;
+    }
+  }
+}
+@include atDesktop1200 {
+  .home-vacancy::after {
+    height: 20px;
+    background-size: 900px;
+  }
+  .home-vacancy__content {
+    gap: 70px;
+  }
+  .home-vacancy__img {
+    width: 500px;
+    & img {
+      bottom: -50px;
+    }
+  }
+  .home-vacancy__text {
+    gap: 25px;
+    margin-top: 25px;
+  }
+  .home-vacancy__paragraph {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .home-vacancy__paragraph--large {
+    font-size: 100px;
+    line-height: 0.8;
+  }
+  .home-vacancy__paragraph--small {
+    font-size: 30px;
+  }
+  .home-vacancy__paragraph--middle {
+    font-size: 50px;
+  }
+}

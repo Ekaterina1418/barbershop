@@ -1,0 +1,130 @@
+.form {
+  grid-area: 2/2;
+  justify-self: end;
+  &__title {
+    color: $color_white;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: $font-main;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  &__franchise {
+    max-width: 320px;
+    &-input {
+      display: block;
+      border: none;
+      outline: none;
+      max-width: 270px;
+      width: 100%;
+      background-color: $color_controls;
+      padding: 10px 15px;
+      font-size: 18px;
+      font-weight: 300;
+      &:not(:nth-last-of-type(2)) {
+        margin-bottom: 15px;
+      }
+      &:nth-last-of-type(2) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-input--color::placeholder {
+      color: $color_white;
+    }
+    &-checkbox {
+      opacity: 0;
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__checkbox-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 40px;
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      transition: all 0.3s ease;
+      margin-right: 10px;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 22px;
+      font-weight: 900;
+    }
+    &--color {
+      color: $color_white;
+    }
+    &--color::before {
+      content: '';
+      border: 2px solid $color_white;
+    }
+    &--color::after {
+      content: '\2713';
+      color: $color_controls;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+  &__policy-link {
+    color: $color_white;
+    text-decoration: none;
+    border-bottom: 1px solid $color_white;
+
+    &:hover {
+      border-bottom: 1px solid $color_accent;
+    }
+  }
+}
+.form-franchise__title {
+  font-family: $font_title;
+  color: $color_white;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 20px;
+}
+.form__franchise-checkbox:checked + .form__checkbox-container::before {
+  background-color: $color_white;
+}
+
+.form__franchise-checkbox:checked + .form__checkbox-container::after {
+  opacity: 1;
+}
+
+@include atTablet700 {
+  .form {
+    &__checkbox-container {
+      margin-bottom: 30px;
+    }
+    &__franchise-input {
+      max-width: 100%;
+    }
+  }
+  .form-franchise__title {
+    font-size: 30px;
+  }
+}
+
+@include atDesktop1200 {
+  .form__checkbox-container {
+    font-size: 14px;
+  }
+}

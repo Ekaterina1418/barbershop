@@ -1,0 +1,20 @@
+.home-footer {
+  background: url('../../../images/bg/bg_footer-red.jpg') no-repeat;
+  background-size: cover;
+
+  &__first-border {
+    border-top: 1px solid $color_accent-dark;
+    border-bottom: 1px solid $color_accent-dark;
+  }
+  &__last-border {
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+@include atTablet700 {
+  .home-footer__last-border {
+    border-top: 1px solid $color_accent-dark;
+    border-bottom: 1px solid $color_accent-dark;
+  }
+}

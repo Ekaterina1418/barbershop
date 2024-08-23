@@ -1,0 +1,72 @@
+.franchise-header {
+  position: relative;
+  background: radial-gradient(
+    circle at 50% 37%,
+    rgba(24, 39, 42, 1) 21%,
+    rgba(13, 21, 23, 1) 41%,
+    rgba(13, 21, 23, 1) 43%,
+    rgba(9, 14, 17, 1) 56%,
+    rgba(14, 24, 26, 1) 99%
+  );
+  &::before {
+    content: '';
+    background: url('../../../images/icons/deco/line-slider_bottom.svg')
+      no-repeat;
+    position: absolute;
+    height: 15px;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+    background-position: left bottom;
+    background-size: 600px;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  &__gradient {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & img {
+      display: block;
+      width: 250px;
+      height: 300px;
+      margin-bottom: 50px;
+    }
+  }
+}
+@include atTablet700 {
+  .franchise-header {
+    &__wrapper {
+      padding: 70px 0;
+    }
+    &__gradient {
+      & img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}
+@include atDesktop1200 {
+  .franchise-header {
+    &::before {
+      height: 32px;
+      background-position: center bottom;
+      background-size: 1300px;
+    }
+    &__gradient {
+      & img {
+        width: 500px;
+        height: 500px;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.page {
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $color_white;
+  font-family: $font_main;
+  font-weight: 400;
+  color: $color_black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+.page__section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page__title {
+  margin: 0;
+  font-family: $font_title;
+  font-size: 30px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page__section-title {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+  font-family: $font_title;
+  font-size: 26px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--color {
+    color: $color_title;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: calc(-66px - 10px);
+    width: 66px;
+    height: 3px;
+    background-color: $color_title;
+  }
+
+  &::before {
+    left: calc(-66px - 10px);
+  }
+}
+
+@include atTablet700 {
+  .page__section {
+    max-width: calc(610px + 45px * 2);
+    padding: 0 45px;
+  }
+
+  .page__section-title {
+    max-width: unset;
+  }
+}
+
+@include atDesktop1200 {
+  .page__section {
+    max-width: calc(1340px + 50px * 2);
+    padding: 0 50px;
+  }
+
+  .page__title {
+    font-size: 50px;
+  }
+
+  .page__section-title {
+    font-size: 50px;
+
+    &::before,
+    &::after {
+      content: '';
+      top: calc(50% - 2.5px);
+      right: calc(-182px - 20px);
+      width: 182px;
+      height: 5px;
+    }
+
+    &::before {
+      left: calc(-182px - 20px);
+    }
+  }
+}

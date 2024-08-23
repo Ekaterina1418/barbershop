@@ -1,0 +1,43 @@
+.home-price {
+  padding: 50px 0;
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    text-decoration: none;
+    color: #000;
+    font-family: $font_title;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  &__item.active {
+    color: $color_accent;
+    border-bottom: 2px solid $color_accent;
+  }
+}
+
+@include atTablet700 {
+  .home-price__list {
+    gap: 15px;
+  }
+
+  .home-price__item {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+@include atDesktop1200 {
+  .home-price__list {
+    gap: 50px;
+  }
+  .home-price__item {
+    font-size: 30px;
+  }
+}

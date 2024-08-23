@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="frame-src 'self' https://www.google.com https://maps.google.com;"
+    />
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7cd0a52b-622e-46d6-a057-d3362d334fc2&lang=ru_RU"></script>
+    <title>Филиал</title>
+  </head>
+  <body class="page">
+    <header id="main">
+      <div class="header__wrapper">
+        <div class="page__section">
+          <div class="header__navigation">
+            <button class="header__burger" type="button">
+              <span class="header__burger__span"></span>
+              <span class="header__burger__span"></span>
+              <span class="header__burger__span"></span>
+            </button>
+
+            <div class="header__menu">
+              <nav class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__list-item">
+                    <a href="/index.html" class="navigation__link">Главная</a>
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="/filial.html" class="navigation__link open-popup"
+                      >Филиалы</a
+                    >
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="/franchise.html" class="navigation__link"
+                      >Франшиза</a
+                    >
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="/franchise.html" class="navigation__link">О нас</a>
+                  </li>
+                  <li class="navigation__list-item">
+                    <a href="/franchise.html" class="navigation__link"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+
+              <ul class="social header__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filial">
+        <div class="page__section">
+          <div class="geolacation">
+            <a href="#" title="Location" class="geolacation__link open-popup">
+              <p>Уфа</p></a
+            >
+          </div>
+          <div class="header__wrapper-main">
+            <div class="home-header__content">
+              <img
+                class="header__logo"
+                src="<%=require('./images/icons/logo/logo_home.svg')%>"
+                alt="Brixton Barbershop лого"
+              />
+              <h1 class="header__title">
+                Превосходство<br />
+                в деталях!
+              </h1>
+            </div>
+
+            <div class="header__cashback"></div>
+
+            <div class="header__center">
+              <button
+                class="lead__appointment-btn lead__appointment-btn--mg lead__appointment-btn--accent"
+                type="button"
+              >
+                Онлайн запись
+              </button>
+              <button
+                class="lead__appointment-btn lead__appointment-btn--mg lead__appointment-btn--accent"
+                type="button"
+              >
+                3D-тур
+              </button>
+            </div>
+
+            <div class="header__review">
+              <p class="header__comment"></p>
+              <hr class="header__line" />
+              <p class="header__data"></p>
+            </div>
+
+            <div class="header__mobile-app">
+              <img
+                class="header__mobile-img"
+                src="<%=require('./images/icons/home/hand.svg')%>"
+                alt="Мобильное приложение"
+              />
+              <div class="header__wrap-app">
+                <p class="header__mobile-text">
+                  Скачать наше мобильное приложение
+                </p>
+                <a
+                  class="header__app"
+                  href="https://play.google.com/store/apps/details?id=com.yclients.mobile.g694866&hl=ru&pli=1"
+                >
+                  <img
+                    src="<%=require('./images/icons/icons-store/google_play.svg')%>"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="header__app"
+                  href="https://apps.apple.com/ru/app/brixton-barbershop/id6444655194?l=en-GB"
+                >
+                  <img
+                    src="<%=require('./images/icons/icons-store/app_store.svg')%>"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home-price">
+        <div class="page__section">
+          <h2 class="price__title">Прайс-лист</h2>
+          <ul class="home-price__list">
+            <li class="home-price__item active" data-target="basic">
+              Основные
+            </li>
+            <li class="home-price__item" data-target="additional">
+              Дополнительные
+            </li>
+            <li class="home-price__item" data-target="comprehensive">
+              Комплексные
+            </li>
+            <li class="home-price__item" data-target="spa">СПА</li>
+          </ul>
+
+          <table class="price__table" id="basic">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services"></td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Топ-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для топ-барбера</span
+                    >
+                  </div>
+                </td>
+
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Мастер-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup master-barber"
+                      >Описание для мастер-барбера</span
+                    >
+                  </div>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="price__table-row">
+                <td class="price__table-cell">Стрижка мужская</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+                <td class="price__table-cell price__table-value">
+                  <span class="price__table-value">1700</span>
+                </td>
+                <td class="price__table-cell price__table-value">
+                  <span class="price__table-value">1900</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Стрижка ножницами</td>
+                <td class="price__table-cell price__table-value">
+                  <span class="price__table-value">1600</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1800</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2000</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка детская (от&nbsp;3&nbsp;до&nbsp;9&nbsp;лет)
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1100</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1300</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка машинкой (две насадки)
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">900</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1000</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1200</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Моделирование бороды</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1100</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1300</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Стрижка бороды</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">800</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">900</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1000</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Бритье традиционное (голова)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1100</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1200</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1300</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Бритье традиционное (лицо)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1100</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1200</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1300</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Королевское бритье (голова)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1700</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1900</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Королевское бритье (лицо)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1700</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1900</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="price__table" id="additional">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services"></td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Топ-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для топ-барбера</span
+                    >
+                  </div>
+                </td>
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Мастер-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для мастер-барбера</span
+                    >
+                  </div>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Камуфляж седины (голова)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1200</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1300</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1400</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Камуфляж седины (борода)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1000</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1100</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1200</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Коррекция воском (одна&nbsp;зона)
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">400</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">400</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">400</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Окантовка</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">600</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">700</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Мытьё и укладка</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">600</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">600</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="price__table" id="comprehensive">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services"></td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Топ-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для топ-барбера</span
+                    >
+                  </div>
+                </td>
+
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Мастер-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для мастер-барбера</span
+                    >
+                  </div>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Друг + друг</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2600</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">3000</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">3400</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Папа + сын (от&nbsp;3&nbsp;до&nbsp;9&nbsp;лет)
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2400</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2600</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2800</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка мужская +&nbsp;Моделирование бороды
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2400</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2700</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2900</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Моделирование бороды +&nbsp;Камуфляж
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2000</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2200</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2500</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка мужская +&nbsp;камуфляж седины (голова)
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2800</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">3100</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Стрижка мужская +&nbsp;Стрижка&nbsp;бороды
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2000</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2300</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">2600</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="price__table" id="spa">
+            <thead>
+              <tr>
+                <td class="price__table-header price__table-services"></td>
+                <td class="price__table-header price__table-barber">Барбер</td>
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Топ-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для топ-барбера</span
+                    >
+                  </div>
+                </td>
+                <td class="price__table-header price__table-barber">
+                  <div class="price__table-flex">
+                    <p>Мастер-барбер</p>
+                    <img
+                      class="price__table-img"
+                      src="<%=require('./images/icons/home/round.svg')%>"
+                      alt=""
+                    />
+                    <span class="price__table-popup top-barber"
+                      >Описание для мастер-барбера</span
+                    >
+                  </div>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price__table-cell">Black mask (Чёрная маска)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">600</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">
+                  Скрабирование (распаривание, мягкое очищение кожи лица)
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">600</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Патчи</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">300</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">300</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">300</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">«Будильник»</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">400</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">400</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">400</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="price__table-cell">Спа-процедура (Комплекс)</td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+                <td class="price__table-cell">
+                  <span class="price__table-value">1500</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="price__elaboration">
+          Актуальные цены смотрите на странице филиала, или уточняйте у
+          админинстратора. Все цены указаны в рублях.
+        </p>
+      </section>
+      <section class="branch-info">
+        <div class="page__section">
+          <div class="branch-info__content">
+            <div class="branch-info__photos">
+              <img
+                src="<%=require('./images/branch/branch-slide_1.jpg')%>"
+                alt="Фото филиала"
+                class="branch-info__photo active"
+              />
+              <img
+                src="<%=require('./images/branch/branch-slide_2.jpg')%>"
+                alt="Фото филиала"
+                class="branch-info__photo"
+              />
+              <img
+                src="<%=require('./images/branch/branch-slide_3.jpg')%>"
+                alt="Фото филиала"
+                class="branch-info__photo"
+              />
+            </div>
+            <div class="branch-info__text">
+              <p class="branch-info__paragraph">
+                Добро пожаловать в&nbsp;наш уфимский филиал по&nbsp;улице
+                Менделеева! Это самый первый филиал нашей сети
+                и&nbsp;он&nbsp;воплощает в&nbsp;себе всё, что мы&nbsp;любим
+                и&nbsp;ценим в&nbsp;своей работе. Вас ждут высококачественные
+                услуги, стильный интерьер и&nbsp;приятная атмосфера. Наши
+                опытные мастера помогут создать неповторимый образ, учитывая все
+                ваши предпочтения.
+              </p>
+              <p class="branch-info__paragraph">
+                Мы&nbsp;заботимся о&nbsp;вашем комфорте и&nbsp;безопасности,
+                поэтому используем только качественные инструменты
+                и&nbsp;материалы. Наш филиал оснащён современным оборудованием,
+                которое позволяет быстро и&nbsp;эффективно выполнять любые
+                стрижки и&nbsp;дополнительные услуги.
+              </p>
+              <p class="branch-info__paragraph">
+                В&nbsp;нашем барбершопе вы&nbsp;сможете не&nbsp;только привести
+                в&nbsp;порядок свою внешность, но&nbsp;и&nbsp;приятно провести
+                время, общаясь с&nbsp;друзьями или коллегами в&nbsp;уютной зоне
+                отдыха.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap-map">
+        <div class="page__section">
+          <h2 class="map-title">Карта филиала</h2>
+
+          <div class="map-content">
+            <div class="map-info">
+              <ul class="map-info__list">
+                <li class="map-info__item">
+                  <p class="map-info__street">Уфа, ул. Менделеева, 145</p>
+                </li>
+                <li class="map-info__item">
+                  <p class="map-info__number">+7 (917) 747-25-25</p>
+                </li>
+                <li class="map-info__item">
+                  <p class="map-info__opening">Ежедневно с 10.00 до 21.00</p>
+                </li>
+                <li>
+                  <a
+                    class="franchise-company__link franchise-company__link--color home-vacancy__link"
+                    href="#main"
+                    type="button"
+                  >
+                    <p>Онлайн запись</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="map" id="map">
+              <p class="latitude-center">54.714511</p>
+              <p class="longitude-center">55.998630</p>
+              <p class="latitude-pin">54.714505</p>
+              <p class="longitude-pin">55.998631</p>
+              <p class="address">ул. Менделеева 145</p>
+              <p class="barbershop-info">Brixton Barbershop</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="barbers">
+        <div class="page__section">
+          <ul class="barbers__list">
+            <li class="barbers__list-item">
+              <div class="barbers__master">
+                <img
+                  src="<%=require('./images/barbers/Виталий.jpg')%>"
+                  alt="Константин"
+                  class="barbers__image"
+                />
+              </div>
+              <p class="barbers__name">Виталий</p>
+              <p class="barbers__grade barbers__grade_top">Мастер-барбер</p>
+
+              <ul class="social barbers__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="barbers__list-item">
+              <img
+                src="<%=require('./images/barbers/Валентина.jpg')%>"
+                alt="Константин"
+                class="barbers__image"
+              />
+              <p class="barbers__name">Валентина</p>
+              <p class="barbers__grade">Барбер</p>
+
+              <ul class="social barbers__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="barbers__list-item">
+              <div class="barbers__top-barber">
+                <img
+                  src="<%=require('./images/barbers/Дмитрий.jpg')%>"
+                  alt="Константин"
+                  class="barbers__image"
+                />
+              </div>
+              <p class="barbers__name">Дмитрий</p>
+              <p class="barbers__grade">Топ-барбер</p>
+
+              <ul class="social barbers__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="barbers__list-item">
+              <img
+                src="<%=require('./images/barbers/Дмитрий_2.jpg')%>"
+                alt="Константин"
+                class="barbers__image"
+              />
+              <p class="barbers__name">Дмитрий</p>
+              <p class="barbers__grade">Топ-барбер</p>
+
+              <ul class="social barbers__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="barbers__list-item">
+              <img
+                src="<%=require('./images/barbers/Фоат.jpg')%>"
+                alt="Константин"
+                class="barbers__image"
+              />
+              <p class="barbers__name">Фоат</p>
+              <p class="barbers__grade">Барбер</p>
+
+              <ul class="social barbers__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </li>
+            <li class="barbers__list-item">
+              <img
+                src="<%=require('./images/barbers/Радмир.jpg')%>"
+                alt="Константин"
+                class="barbers__image"
+              />
+              <p class="barbers__name">Радмир</p>
+              <p class="barbers__grade">Барбер</p>
+
+              <ul class="social barbers__social">
+                <li>
+                  <a
+                    href="#"
+                    title="VKontakte"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    title="Instagram"
+                    target="_blank"
+                    class="social__link"
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="home-vacancy">
+        <div class="page__section">
+          <div class="home-vacancy__content">
+            <div class="home-vacancy__text">
+              <p class="home-vacancy__paragraph">
+                Уверен в&nbsp;своих силах и&nbsp;готов работать<br />
+                в&nbsp;команде профессионалов,<br />
+                расти и&nbsp;развиваться вместе с&nbsp;нами?<br />
+                Тогда мы&nbsp;рады сообщить что<br />
+                <span class="home-vacancy__paragraph--large">BRIXTON</span
+                ><br />
+                <span class="home-vacancy__paragraph--small">ищет</span><br />
+                <span class="home-vacancy__paragraph--middle">
+                  лучшего барбера</span
+                >
+              </p>
+              <a
+                class="franchise-company__link franchise-company__link--color home-vacancy__link"
+                href="#main"
+                type="button"
+              >
+                <p>Онлайн запись</p>
+              </a>
+            </div>
+            <div class="home-vacancy__img">
+              <img
+                src="<%=require('./images/barber-wanted.png')%>"
+                alt="Франчайз логотип"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-franchise">
+        <div class="page__section">
+          <h2 class="map-title">
+            А&nbsp;может быть ты&nbsp;сам хочешь<br />
+            стать владельцем нового филиала BRIXTON?
+          </h2>
+          <div class="map-info__content">
+            <div class="map-info__img">
+              <img
+                src="<%=require('./images/icons/home/franchise-logo.svg')%>"
+                alt="Франчайз логотип"
+              />
+            </div>
+            <ul class="map-info__offer map-info__list">
+              <li class="map-info__item">
+                <p class="map-info__opening">
+                  Мы&nbsp;предлагаем вам готовый<br />
+                  бизнес-план, обучение<br />
+                  и&nbsp;поддержку на&nbsp;всех этапах запуска<br />
+                  и&nbsp;развития вашего предприятия.<br /><br />
+                </p>
+              </li>
+              <li class="map-info__item">
+                <p class="map-info__opening">
+                  Не&nbsp;упустите свой шанс начать<br />
+                  успешный бизнес в&nbsp;сфере красоты<br />
+                  и&nbsp;мужского стиля! Свяжитесь с&nbsp;нами<br />
+                  для получения подробной информации<br />
+                  и&nbsp;начала сотрудничества.
+                </p>
+              </li>
+              <li class="map-info__item">
+                <a
+                  class="franchise-company__link franchise-company__link--color home-vacancy__link"
+                  href="#main"
+                  type="button"
+                >
+                  <p>Онлайн запись</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="popup" class="popup">
+      <div class="popup__content">
+        <span class="popup__close">&times;</span>
+        <img
+          src="<%=require('./images/icons/logo/logo_footer.svg')%>"
+          alt="Логотип"
+          class="popup__logo"
+        />
+        <p class="popup__text">Выбери свой&nbsp;<span>барбершоп</span></p>
+        <ul class="popup__list">
+          <li class="popup__item"><a class="popup__city" href="#">Уфа</a></li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">ул. Менделеева 145</a>
+          </li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">ул. Энтузиастов 7 </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer branch-footer">
+      <div class="page__section footer__wrapper">
+        <div
+          class="footer__menu footer__menu--gap-large branch-footer__first-border"
+        >
+          <ul class="footer__list">
+            <li class="footer__link-main">Меню</li>
+            <li><a class="footer__link" href="/index.html">Главная</a></li>
+            <li><a class="footer__link" href="/franchise.html">Франшиза</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__link-main">Информация</li>
+            <li>
+              <a class="footer__link" href="/policy.html"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a class="footer__link" href="/terms-of-use.html"
+                >Условия использования</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__stamp">
+          <img
+            src="<%=require('./images/icons/home/brixton-stamp.svg')%>"
+            alt="Логотип нижний"
+          />
+        </div>
+        <div
+          class="footer__menu footer__menu--gap-small branch-footer__last-border"
+        >
+          <img
+            class="footer__social"
+            src="<%=require('./images/icons/social/vkontakte.svg')%>"
+            alt="Логотип нижний"
+          />
+          <img
+            class="footer__social"
+            src="<%=require('./images/icons/social/instagram.svg')%>"
+            alt="Логотип нижний"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

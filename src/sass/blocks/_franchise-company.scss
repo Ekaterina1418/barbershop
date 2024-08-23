@@ -1,0 +1,85 @@
+.franchise-company {
+  background-color: rgba(192, 195, 204, 0.1);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 50px 50px;
+    padding: 50px;
+  }
+  &__slider {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: $font_main;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    & span {
+      color: $color_accent;
+      font-weight: 800;
+      text-align: center;
+    }
+  }
+  &__text {
+    font-family: $font_main;
+    font-size: 15px;
+    text-align: center;
+    &--last {
+      margin: 25px 0 30px 0;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 40px;
+    border: none;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.1;
+    color: $color_white;
+    mask-image: url('../../images/deco/button-line.svg');
+    -webkit-mask-image: url('../../images/deco/button-line.svg');
+    mask-position: center;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    transition: 0.3s linear;
+    cursor: pointer;
+    text-decoration: none;
+    &--color {
+      background-color: $color_accent-dark;
+    }
+  }
+}
+
+@include atTablet700 {
+  .franchise-company__link {
+    width: 270px;
+    height: 50px;
+  }
+}
+
+@include atDesktop1200 {
+  .franchise-company__content {
+    padding: 100px 50px 50px;
+  }
+  .franchise-company__slider {
+    flex-direction: row;
+  }
+  .franchise-company__title {
+    text-align: left;
+    & span {
+      text-align: left;
+    }
+  }
+  .franchise-company__text {
+    text-align: left;
+    font-size: 22px;
+    &--last {
+      margin: 35px 0 50px 0;
+    }
+  }
+}

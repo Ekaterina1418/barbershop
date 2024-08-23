@@ -1,0 +1,131 @@
+.franchise-top_list {
+  background-color: $color_title;
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+  &::after {
+    content: '';
+    background: url('../../../images/icons/deco/line-slider_bottom.svg')
+      no-repeat;
+    background-position: right;
+    background-size: 100%;
+    height: clamp(16px, 3vw, 27px);
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    position: relative;
+  }
+  &__cup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  &__fact {
+    font-family: $font_title;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: $color_white;
+    &--large {
+      text-transform: uppercase;
+      font-size: 40px;
+      line-height: 0.8;
+    }
+  }
+  &__img {
+    width: 35%;
+  }
+  &__map {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__overlay-map {
+    position: static;
+    max-width: none;
+    min-height: auto;
+    margin-top: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    transform: translate(0);
+    gap: 15px;
+  }
+  &__action {
+    font-family: $font_title;
+    font-size: clamp(1rem, 5vw, 2.3rem);
+    color: $color_white;
+    text-align: center;
+    z-index: 2;
+  }
+}
+
+@include atTablet700 {
+  .franchise-top_list {
+    &::after {
+      height: clamp(24px, 3vw, 40px);
+    }
+    &::before {
+      min-height: 450px;
+    }
+    &__content {
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+    }
+    &__map {
+      gap: 0;
+    }
+
+    &__fact {
+      font-size: 30px;
+      &--large {
+        font-size: 50px;
+      }
+    }
+    &__img {
+      width: 75%;
+    }
+  }
+}
+@include atDesktop1200 {
+  .franchise-top_list {
+    padding: 70px 0;
+    &::before {
+      min-height: 650px;
+    }
+    &__overlay {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-35%, 10%);
+    }
+    &__overlay-map {
+      position: relative;
+      max-width: 1000px;
+      min-height: 500px;
+      margin-top: -130px;
+    }
+    &__img {
+      width: 80%;
+    }
+  }
+}

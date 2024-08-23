@@ -1,0 +1,23 @@
+@mixin between500and700 {
+  @media (min-width: 500px) and (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin atTablet700 {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin atDesktop1000 {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin atDesktop1200 {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
