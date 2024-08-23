@@ -1,9 +1,7 @@
 .home__content {
-  background: url('../../../images/bg/bg_borodach.jpg') no-repeat;
-  background-size: 100%;
-  background-position: 50% 85%;
-  width: 100%;
-  height: 100%;
+  background: url('../../../images/bg/bg_borodach-mobile.jpg') no-repeat;
+  background-size: 75%;
+  background-position: 50% 60%;
   background-color: #000;
   position: relative;
 
@@ -27,14 +25,18 @@
   z-index: 2;
 }
 
-@include between500and700 {
+@include atMobile500 {
   .home__content {
-    background-size: 80%;
-    background-position: 50% 90%;
+    background-size: 60%;
+    background-position: 50% 70%;
   }
 }
 @include atTablet700 {
   .home__content {
+    background: url('../../../images/bg/bg_borodach.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
     background-position: 70% 30%;
     background-size: 50%;
     &::after {

@@ -1,5 +1,5 @@
-@mixin between500and700 {
-  @media (min-width: 500px) and (max-width: 700px) {
+@mixin atMobile500 {
+  @media (min-width: 500px) {
     @content;
   }
 }

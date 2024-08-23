@@ -94,7 +94,7 @@
   gap: 20px;
 }
 
-@include between500and700 {
+@include atMobile500 {
   .advantages-slider__wrapper {
     min-height: 350px;
   }

@@ -74,7 +74,7 @@
     height: 100%;
   }
 }
-@include between500and700 {
+@include atMobile500 {
   .franchise-conditions {
     &__list::before {
       width: clamp(80px, 20vw, 100px);
